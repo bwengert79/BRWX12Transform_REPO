@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TransactionSet id="276">
+  <Segment id="ST"/>
+  <Segment id="BHT"/>
+  <Segment id="SE"/>
+  <Loop id="2000A" StartSegment="HL" Repetition="-1">
+    <Segment id="HL"/>
+    <Loop id="2100A" StartSegment="NM1">
+      <Segment id="NM1"/>
+    </Loop>
+    <Loop id="2000B" StartSegment="HL" Repetition="-1">
+      <Segment id="HL"/>
+      <Loop id="2100B" StartSegment="NM1">
+        <Segment id="NM1"/>
+      </Loop>
+      <Loop id="2000C" StartSegment="HL" Repetition="-1">
+        <Segment id="HL"/>
+        <Loop id="2100C" StartSegment="NM1">
+          <Segment id="NM1"/>
+        </Loop>
+        <Loop id="2000D" StartSegment="HL" Repetition="-1">
+          <Segment id="HL"/>
+          <Segment id="DMG"/>
+          <Loop id="2100D" StartSegment="NM1">
+            <Segment id="NM1"/>
+          </Loop>
+          <Loop id="2200D" StartSegment="TRN" Repetition="-1">
+            <Segment id="TRN"/>
+            <Segment id="REF"/>
+            <Segment id="AMT"/>
+            <Segment id="DTP"/>
+            <Loop id="2210D" StartSegment="SVC" Repetition="-1">
+              <Segment id="SVC"/>
+              <Segment id="REF"/>
+              <Segment id="DTP"/>
+            </Loop>
+          </Loop>
+          <Loop id="2000E" StartSegment="HL" Repetition="-1">
+            <Segment id="HL"/>
+            <Segment id="DMG"/>
+            <Loop id="2100E" StartSegment="NM1">
+              <Segment id="NM1"/>
+            </Loop>
+            <Loop id="2200E" StartSegment="TRN" Repetition="-1">
+              <Segment id="TRN"/>
+              <Segment id="REF"/>
+              <Segment id="AMT"/>
+              <Segment id="DTP"/>
+              <Loop id="2210E" StartSegment="SVC" Repetition="-1">
+                <Segment id="SVC"/>
+                <Segment id="STC"/>
+                <Segment id="REF"/>
+                <Segment id="DTP"/>
+              </Loop>
+            </Loop>
+          </Loop>
+        </Loop>
+      </Loop>
+    </Loop>
+  </Loop>
+</TransactionSet>

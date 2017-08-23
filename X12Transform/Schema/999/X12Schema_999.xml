@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TransactionSet id="999">
+  <Segment id="ST"/>
+  <Segment id="AK1"/>
+  <Segment id="AK9"/>
+  <Segment id="SE"/>
+  <Loop id="2000" StartSegment="AK2" Repetition="-1">
+    <Segment id="AK2"/>
+    <Segment id="IK5"/>
+    <Loop id="2100" StartSegment="IK3" Repetition="-1">
+      <Segment id="IK3"/>
+      <Segment id="CTX"/>
+      <Loop id="2110" StartSegment="IK4" Repetition="-1">
+        <Segment id="IK4"/>
+        <Segment id="CTX"/>
+      </Loop>
+    </Loop>
+  </Loop>
+</TransactionSet>

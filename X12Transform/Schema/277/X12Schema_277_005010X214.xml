@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TransactionSet id="277" impl="005010X214">
+  <Segment id="ST"/>
+  <Segment id="BHT"/>
+  <Segment id="SE"/>
+  <Loop id="2000A" StartSegment="HL" Repetition="-1">
+    <Segment id="HL"/>
+    <Loop id="2100A" StartSegment="NM1">
+      <Segment id="NM1"/>
+    </Loop>
+    <Loop id="2200A" StartSegment="TRN">
+      <Segment id="TRN"/>
+      <Segment id="DTP"/>
+    </Loop>
+    <Loop id="2000B" StartSegment="HL" Repetition="-1">
+      <Segment id="HL"/>
+      <Loop id="2100B" StartSegment="NM1">
+        <Segment id="NM1"/>
+      </Loop>
+      <Loop id="2200B" StartSegment="TRN">
+        <Segment id="TRN"/>
+        <Segment id="STC"/>
+        <Segment id="QTY"/>
+        <Segment id="AMT"/>
+      </Loop>
+      <Loop id="2000C" StartSegment="HL" Repetition="-1">
+        <Segment id="HL"/>
+        <Loop id="2100C" StartSegment="NM1">
+          <Segment id="NM1"/>
+        </Loop>
+        <Loop id="2200C" StartSegment="TRN">
+          <Segment id="TRN"/>
+          <Segment id="STC"/>
+          <Segment id="REF"/>
+          <Segment id="QTY"/>
+          <Segment id="AMT"/>
+        </Loop>
+        <Loop id="2000D" StartSegment="HL" Repetition="-1">
+          <Segment id="HL"/>
+          <Loop id="2100D" StartSegment="NM1">
+            <Segment id="NM1"/>
+          </Loop>
+          <Loop id="2200D" StartSegment="TRN">
+            <Segment id="TRN"/>
+            <Segment id="STC"/>
+            <Segment id="REF"/>
+            <Segment id="DTP"/>
+            <Loop id="2220D" StartSegment="SVC" Repetition="-1">
+              <Segment id="SVC"/>
+              <Segment id="STC"/>
+              <Segment id="REF"/>
+              <Segment id="DTP"/>
+            </Loop>
+          </Loop>
+        </Loop>
+      </Loop>
+    </Loop>
+  </Loop>
+</TransactionSet>

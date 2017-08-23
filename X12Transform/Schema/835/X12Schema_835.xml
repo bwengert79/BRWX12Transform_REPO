@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TransactionSet id="835">
+  <Segment id="ST"/>
+  <Segment id="BPR"/>
+  <Segment id="TRN"/>
+  <Segment id="CUR"/>
+  <Segment id="REF"/>
+  <Segment id="DTM"/>
+  <Segment id="PLB"/>
+  <Segment id="SE"/>
+  <Loop id="1000A" StartSegment="N1" StartSegmentData="PR">
+    <Segment id="N1"/>
+    <Segment id="N3"/>
+    <Segment id="N4"/>
+    <Segment id="REF"/>
+    <Segment id="PER"/>
+  </Loop>
+  <Loop id="1000B" StartSegment="N1" StartSegmentData="PE">
+    <Segment id="N1"/>
+    <Segment id="N3"/>
+    <Segment id="N4"/>
+    <Segment id="REF"/>
+    <Segment id="RDM"/>
+  </Loop>
+  <Loop id="2000" StartSegment="LX" Repetition="-1">
+    <Segment id="LX"/>
+    <Segment id="TS3"/>
+    <Segment id="TS2"/>
+    <Loop id="2100" StartSegment="CLP" Repetition="-1">
+      <Segment id="CLP"/>
+      <Segment id="CAS"/>
+      <Segment id="NM1"/>
+      <Segment id="MIA"/>
+      <Segment id="MOA"/>
+      <Segment id="REF"/>
+      <Segment id="DTM"/>
+      <Segment id="PER"/>
+      <Segment id="AMT"/>
+      <Segment id="QTY"/>
+      <Loop id="2110" StartSegment="SVC" Repetition="-1">
+        <Segment id="SVC"/>
+        <Segment id="DTM"/>
+        <Segment id="CAS"/>
+        <Segment id="REF"/>
+        <Segment id="AMT"/>
+        <Segment id="QTY"/>
+        <Segment id="LQ"/>
+    </Loop>
+    </Loop>
+  </Loop>
+</TransactionSet>
+

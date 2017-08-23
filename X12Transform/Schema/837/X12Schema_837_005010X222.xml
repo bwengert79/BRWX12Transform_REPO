@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TransactionSet id="837" impl="005010X222">
+  <Segment id="ST"/>
+  <Segment id="BHT"/>
+  <Segment id="SE"/>
+  <Loop id="1000A" StartSegment="NM1" StartSegmentData="41">
+    <Segment id="NM1"/>
+    <Segment id="PER"/>
+  </Loop>
+  <Loop id="1000B" StartSegment="NM1" StartSegmentData="40">
+    <Segment id="NM1"/>
+  </Loop>
+  <Loop id="2000A" StartSegment="HL" Repetition="-1">
+    <Segment id="HL"/>
+    <Segment id="PRV"/>
+    <Segment id="CUR"/>
+    <Loop id="2010AA" StartSegment="NM1" StartSegmentData="85">
+      <Segment id="NM1"/>
+      <Segment id="N3"/>
+      <Segment id="N4"/>
+      <Segment id="REF"/>
+      <Segment id="PER"/>
+    </Loop>
+    <Loop id="2010AB" StartSegment="NM1" StartSegmentData="87">
+      <Segment id="NM1"/>
+      <Segment id="N3"/>
+      <Segment id="N4"/>
+    </Loop>
+    <Loop id="2010AC" StartSegment="NM1" StartSegmentData="PE">
+      <Segment id="NM1"/>
+      <Segment id="N3"/>
+      <Segment id="N4"/>
+      <Segment id="REF"/>
+    </Loop>
+    <Loop id="2000B" StartSegment="HL" Repetition="-1">
+      <Segment id="HL"/>
+      <Segment id="SBR"/>
+      <Segment id="PAT"/>
+      <Loop id="2010BA" StartSegment="NM1" StartSegmentData="IL">
+        <Segment id="NM1"/>
+        <Segment id="N3"/>
+        <Segment id="N4"/>
+        <Segment id="DMG"/>
+        <Segment id="REF"/>
+        <Segment id="PER"/>
+      </Loop>
+      <Loop id="2010BB" StartSegment="NM1" StartSegmentData="PR">
+        <Segment id="NM1"/>
+        <Segment id="N3"/>
+        <Segment id="N4"/>
+        <Segment id="REF"/>
+      </Loop>
+      <Loop id="2300" StartSegment="CLM" Repetition="100">
+        <Segment id="CLM"/>
+        <Segment id="DTP"/>
+        <Segment id="PWK"/>
+        <Segment id="CN1"/>
+        <Segment id="AMT"/>
+        <Segment id="REF"/>
+        <Segment id="K3"/>
+        <Segment id="NTE"/>
+        <Segment id="CR1"/>
+        <Segment id="CR2"/>
+        <Segment id="CRC"/>
+        <Segment id="HI"/>
+        <Segment id="HCP"/>
+        <Loop id="2310A" StartSegment="NM1" StartSegmentData="DN" Repetition="2">
+          <Segment id="NM1"/>
+          <Segment id="REF"/>
+        </Loop>
+        <Loop id="2310B" StartSegment="NM1" StartSegmentData="82">
+          <Segment id="NM1"/>
+          <Segment id="PRV"/>
+          <Segment id="REF"/>
+        </Loop>
+        <Loop id="2310C" StartSegment="NM1" StartSegmentData="77">
+          <Segment id="NM1"/>
+          <Segment id="N3"/>
+          <Segment id="N4"/>
+          <Segment id="REF"/>
+          <Segment id="PER"/>
+        </Loop>
+        <Loop id="2310D" StartSegment="NM1" StartSegmentData="DQ">
+          <Segment id="NM1"/>
+          <Segment id="REF"/>
+        </Loop>
+        <Loop id="2310E" StartSegment="NM1" StartSegmentData="PW">
+          <Segment id="NM1"/>
+          <Segment id="N3"/>
+          <Segment id="N4"/>
+        </Loop>
+        <Loop id="2310F" StartSegment="NM1" StartSegmentData="45">
+          <Segment id="NM1"/>
+          <Segment id="N3"/>
+          <Segment id="N4"/>
+        </Loop>
+        <Loop id="2320" StartSegment="SBR" Repetition="10">
+          <Segment id="SBR"/>
+          <Segment id="CAS"/>
+          <Segment id="AMT"/>
+          <Segment id="OI"/>
+          <Segment id="MOA"/>
+          <Loop id="2330A" StartSegment="NM1" StartSegmentData="IL">
+            <Segment id="NM1"/>
+            <Segment id="N3"/>
+            <Segment id="N4"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2330B" StartSegment="NM1" StartSegmentData="PR">
+            <Segment id="NM1"/>
+            <Segment id="N3"/>
+            <Segment id="N4"/>
+            <Segment id="DTP"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2330C" StartSegment="NM1" StartSegmentData="DN" Repetition="2">
+            <Segment id="NM1"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2330D" StartSegment="NM1" StartSegmentData="82">
+            <Segment id="NM1"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2330E" StartSegment="NM1" StartSegmentData="77">
+            <Segment id="NM1"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2330F" StartSegment="NM1" StartSegmentData="DQ">
+            <Segment id="NM1"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2330G" StartSegment="NM1" StartSegmentData="85">
+            <Segment id="NM1"/>
+            <Segment id="REF"/>
+          </Loop>
+        </Loop>
+        <Loop id="2400" StartSegment="LX" Repetition="50">
+          <Segment id="LX"/>
+          <Segment id="SV1"/>
+          <Segment id="SV5"/>
+          <Segment id="PWK"/>
+          <Segment id="CR1"/>
+          <Segment id="CR3"/>
+          <Segment id="CRC"/>
+          <Segment id="DTP"/>
+          <Segment id="QTY"/>
+          <Segment id="MEA"/>
+          <Segment id="CN1"/>
+          <Segment id="REF"/>
+          <Segment id="AMT"/>
+          <Segment id="K3"/>
+          <Segment id="NTE"/>
+          <Segment id="PS1"/>
+          <Segment id="HCP"/>
+          <Loop id="2410" StartSegment="LIN">
+            <Segment id="LIN"/>
+            <Segment id="CTP"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2420A" StartSegment="NM1" StartSegmentData="82">
+            <Segment id="NM1"/>
+            <Segment id="PRV"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2420B" StartSegment="NM1" StartSegmentData="QB">
+            <Segment id="NM1"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2420C" StartSegment="NM1" StartSegmentData="77">
+            <Segment id="NM1"/>
+            <Segment id="N3"/>
+            <Segment id="N4"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2420D" StartSegment="NM1" StartSegmentData="DQ">
+            <Segment id="NM1"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2420E" StartSegment="NM1" StartSegmentData="DK">
+            <Segment id="NM1"/>
+            <Segment id="N3"/>
+            <Segment id="N4"/>
+            <Segment id="REF"/>
+            <Segment id="PER"/>
+          </Loop>
+          <Loop id="2420F" StartSegment="NM1" StartSegmentData="DN" Repetition="2">
+            <Segment id="NM1"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2420G" StartSegment="NM1" StartSegmentData="PW">
+            <Segment id="NM1"/>
+            <Segment id="N3"/>
+            <Segment id="N4"/>
+          </Loop>
+          <Loop id="2420H" StartSegment="NM1" StartSegmentData="45">
+            <Segment id="NM1"/>
+            <Segment id="N3"/>
+            <Segment id="N4"/>
+          </Loop>
+          <Loop id="2430" StartSegment="SVD" Repetition="15">
+            <Segment id="SVD"/>
+            <Segment id="CAS"/>
+            <Segment id="DTP"/>
+            <Segment id="AMT"/>
+          </Loop>
+          <Loop id="2440" StartSegment="LQ" Repetition="-1">
+            <Segment id="LQ"/>
+            <Segment id="FRM"/>
+          </Loop>
+        </Loop>
+      </Loop>
+    </Loop>
+    <Loop id="2000C" StartSegment="HL" Repetition="-1">
+      <Segment id="HL"/>
+      <Segment id="PAT"/>
+      <Loop id="2010CA" StartSegment="NM1" StartSegmentData="QC">
+        <Segment id="NM1"/>
+        <Segment id="N3"/>
+        <Segment id="N4"/>
+        <Segment id="DMG"/>
+        <Segment id="REF"/>
+        <Segment id="PER"/>
+      </Loop>
+      <Loop id="2300" StartSegment="CLM" Repetition="100">
+        <Segment id="CLM"/>
+        <Segment id="DTP"/>
+        <Segment id="PWK"/>
+        <Segment id="CN1"/>
+        <Segment id="AMT"/>
+        <Segment id="REF"/>
+        <Segment id="K3"/>
+        <Segment id="NTE"/>
+        <Segment id="CR1"/>
+        <Segment id="CR2"/>
+        <Segment id="CRC"/>
+        <Segment id="HI"/>
+        <Segment id="HCP"/>
+        <Loop id="2310A" StartSegment="NM1" StartSegmentData="DN" Repetition="2">
+          <Segment id="NM1"/>
+          <Segment id="REF"/>
+        </Loop>
+        <Loop id="2310B" StartSegment="NM1" StartSegmentData="82">
+          <Segment id="NM1"/>
+          <Segment id="PRV"/>
+          <Segment id="REF"/>
+        </Loop>
+        <Loop id="2310C" StartSegment="NM1" StartSegmentData="77">
+          <Segment id="NM1"/>
+          <Segment id="N3"/>
+          <Segment id="N4"/>
+          <Segment id="REF"/>
+          <Segment id="PER"/>
+        </Loop>
+        <Loop id="2310D" StartSegment="NM1" StartSegmentData="DQ">
+          <Segment id="NM1"/>
+          <Segment id="REF"/>
+        </Loop>
+        <Loop id="2310E" StartSegment="NM1" StartSegmentData="PW">
+          <Segment id="NM1"/>
+          <Segment id="N3"/>
+          <Segment id="N4"/>
+        </Loop>
+        <Loop id="2310F" StartSegment="NM1" StartSegmentData="45">
+          <Segment id="NM1"/>
+          <Segment id="N3"/>
+          <Segment id="N4"/>
+        </Loop>
+        <Loop id="2320" StartSegment="SBR" Repetition="10">
+          <Segment id="SBR"/>
+          <Segment id="CAS"/>
+          <Segment id="AMT"/>
+          <Segment id="OI"/>
+          <Segment id="MOA"/>
+          <Loop id="2330A" StartSegment="NM1" StartSegmentData="IL">
+            <Segment id="NM1"/>
+            <Segment id="N3"/>
+            <Segment id="N4"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2330B" StartSegment="NM1" StartSegmentData="PR">
+            <Segment id="NM1"/>
+            <Segment id="N3"/>
+            <Segment id="N4"/>
+            <Segment id="DTP"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2330C" StartSegment="NM1" StartSegmentData="DN" Repetition="2">
+            <Segment id="NM1"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2330D" StartSegment="NM1" StartSegmentData="82">
+            <Segment id="NM1"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2330E" StartSegment="NM1" StartSegmentData="77">
+            <Segment id="NM1"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2330F" StartSegment="NM1" StartSegmentData="DQ">
+            <Segment id="NM1"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2330G" StartSegment="NM1" StartSegmentData="85">
+            <Segment id="NM1"/>
+            <Segment id="REF"/>
+          </Loop>
+        </Loop>
+        <Loop id="2400" StartSegment="LX" Repetition="50">
+          <Segment id="LX"/>
+          <Segment id="SV1"/>
+          <Segment id="SV5"/>
+          <Segment id="PWK"/>
+          <Segment id="CR1"/>
+          <Segment id="CR3"/>
+          <Segment id="CRC"/>
+          <Segment id="DTP"/>
+          <Segment id="QTY"/>
+          <Segment id="MEA"/>
+          <Segment id="CN1"/>
+          <Segment id="REF"/>
+          <Segment id="AMT"/>
+          <Segment id="K3"/>
+          <Segment id="NTE"/>
+          <Segment id="PS1"/>
+          <Segment id="HCP"/>
+          <Loop id="2410" StartSegment="LIN">
+            <Segment id="LIN"/>
+            <Segment id="CTP"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2420A" StartSegment="NM1" StartSegmentData="82">
+            <Segment id="NM1"/>
+            <Segment id="PRV"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2420B" StartSegment="NM1" StartSegmentData="QB">
+            <Segment id="NM1"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2420C" StartSegment="NM1" StartSegmentData="77">
+            <Segment id="NM1"/>
+            <Segment id="N3"/>
+            <Segment id="N4"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2420D" StartSegment="NM1" StartSegmentData="DQ">
+            <Segment id="NM1"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2420E" StartSegment="NM1" StartSegmentData="DK">
+            <Segment id="NM1"/>
+            <Segment id="N3"/>
+            <Segment id="N4"/>
+            <Segment id="REF"/>
+            <Segment id="PER"/>
+          </Loop>
+          <Loop id="2420F" StartSegment="NM1" StartSegmentData="DN" Repetition="2">
+            <Segment id="NM1"/>
+            <Segment id="REF"/>
+          </Loop>
+          <Loop id="2420G" StartSegment="NM1" StartSegmentData="PW">
+            <Segment id="NM1"/>
+            <Segment id="N3"/>
+            <Segment id="N4"/>
+          </Loop>
+          <Loop id="2420H" StartSegment="NM1" StartSegmentData="45">
+            <Segment id="NM1"/>
+            <Segment id="N3"/>
+            <Segment id="N4"/>
+          </Loop>
+          <Loop id="2430" StartSegment="SVD" Repetition="15">
+            <Segment id="SVD"/>
+            <Segment id="CAS"/>
+            <Segment id="DTP"/>
+            <Segment id="AMT"/>
+          </Loop>
+          <Loop id="2440" StartSegment="LQ" Repetition="-1">
+            <Segment id="LQ"/>
+            <Segment id="FRM"/>
+          </Loop>
+        </Loop>
+      </Loop>
+    </Loop>
+  </Loop>
+</TransactionSet>
+

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TransactionSet id="271">
+  <Segment id="ST"/>
+  <Segment id="BHT"/>
+  <Segment id="SE"/>
+  <Loop id="2000A" StartSegment="HL" Repetition="-1">
+    <Segment id="HL"/>
+    <Segment id="AAA"/>
+    <Loop id="2100A" StartSegment="NM1">
+      <Segment id="NM1"/>
+      <Segment id="PER"/>
+      <Segment id="AAA"/>
+    </Loop>
+    <Loop id="2000B" StartSegment="HL" Repetition="-1">
+      <Segment id="HL"/>
+      <Loop id="2100B" StartSegment="NM1">
+        <Segment id="NM1"/>
+        <Segment id="REF"/>
+        <Segment id="N3"/>
+        <Segment id="N4"/>
+        <Segment id="AAA"/>
+        <Segment id="PRV"/>
+      </Loop>
+      <Loop id="2000C" StartSegment="HL" Repetition="-1">
+        <Segment id="HL"/>
+        <Segment id="TRN"/>
+        <Loop id="2100C" StartSegment="NM1">
+          <Segment id="NM1"/>
+          <Segment id="REF"/>
+          <Segment id="N3"/>
+          <Segment id="N4"/>
+          <Segment id="AAA"/>
+          <Segment id="PRV"/>
+          <Segment id="DMG"/>
+          <Segment id="INS"/>
+          <Segment id="HI"/>
+          <Segment id="DTP"/>
+          <Segment id="MPI"/>
+          <Loop id="2110C" StartSegment="EB" Repetition="-1">
+            <Segment id="EB"/>
+            <Segment id="HSD"/>
+            <Segment id="REF"/>
+            <Segment id="DTP"/>
+            <Segment id="AAA"/>
+            <Segment id="MSG"/>
+            <Loop id="2115C" StartSegment="III" Repetition="10">
+              <Segment id="III"/>
+            </Loop>
+            <Loop id="2120C" StartSegment="LS" EndSegment="LE" Repetition="23">
+              <Segment id="LS"/>
+              <Segment id="NM1"/>
+              <Segment id="N3"/>
+              <Segment id="N4"/>
+              <Segment id="PER"/>
+              <Segment id="PRV"/>
+              <Segment id="LE"/>
+            </Loop>
+          </Loop>
+        </Loop>
+        <Loop id="2000D" StartSegment="HL" Repetition="-1">
+          <Segment id="HL"/>
+          <Segment id="TRN"/>
+          <Loop id="2100D" StartSegment="NM1">
+            <Segment id="NM1"/>
+            <Segment id="REF"/>
+            <Segment id="N3"/>
+            <Segment id="N4"/>
+            <Segment id="AAA"/>
+            <Segment id="PRV"/>
+            <Segment id="DMG"/>
+            <Segment id="INS"/>
+            <Segment id="HI"/>
+            <Segment id="DTP"/>
+            <Segment id="MPI"/>
+            <Loop id="2110D" StartSegment="EB" Repetition="-1">
+              <Segment id="EB"/>
+              <Segment id="HSD"/>
+              <Segment id="REF"/>
+              <Segment id="DTP"/>
+              <Segment id="AAA"/>
+              <Segment id="MSG"/>
+              <Loop id="2115D" StartSegment="III" Repetition="10">
+                <Segment id="III"/>
+              </Loop>
+              <Loop id="2120D" StartSegment="LS" EndSegment="LE" Repetition="23">
+                <Segment id="LS"/>
+                <Segment id="NM1"/>
+                <Segment id="N3"/>
+                <Segment id="N4"/>
+                <Segment id="PER"/>
+                <Segment id="PRV"/>
+                <Segment id="LE"/>
+              </Loop>
+            </Loop>
+          </Loop>
+        </Loop>
+      </Loop>
+    </Loop>
+  </Loop>
+</TransactionSet>
+
