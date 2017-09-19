@@ -10,7 +10,7 @@
   <xsl:template match="Loop[@id = '2000A']">
     <div class="section">
       <div class="secHeader" onclick="onSectionClick()">
-        <span class="secMarker">-</span> Payer Information
+        <span class="secMarker">-</span> Information Source Detail
       </div>
       <div class="secContent">
         <table class="secTable">
@@ -34,7 +34,7 @@
   <xsl:template match="Loop[@id = '2000B']">
     <div class="section indent">
       <div class="secHeader" onclick="onSectionClick()">
-        <span class="secMarker">-</span> Receiver Information
+        <span class="secMarker">-</span> Information Receiver Detail
       </div>
       <div class="secContent">
         <table class="secTable">
@@ -62,7 +62,7 @@
   <xsl:template match="Loop[@id = '2000C']">
     <div class="section indent">
       <div class="secHeader" onclick="onSectionClick()">
-        <span class="secMarker">-</span> Service Provider Information
+        <span class="secMarker">-</span> Service Provider Detail
       </div>
       <div class="secContent">
         <table class="secTable">
@@ -90,7 +90,7 @@
   <xsl:template match="Loop[@id = '2000D']">
     <div class="section indent">
       <div class="secHeader" onclick="onSectionClick()">
-        <span class="secMarker">-</span> Subscriber Information
+        <span class="secMarker">-</span> Subscriber Detail
       </div>
       <div class="secContent">
         <table class="secTable">
@@ -138,7 +138,7 @@
   <xsl:template match="Loop[@id = '2000E']">
     <div class="section indent">
       <div class="secHeader" onclick="onSectionClick()">
-        <span class="secMarker">-</span> Dependent Information
+        <span class="secMarker">-</span> Dependent Detail
       </div>
       <div class="secContent">
         <table class="secTable">

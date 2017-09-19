@@ -15,7 +15,10 @@
       <body>
         <div class="main">
           <div class="title">Implementation Acknowledgment For Health Care Insurance (999)</div>
+          <xsl:apply-templates select="X12/InterchangeControl/ISA" />
           <xsl:apply-templates select="X12/InterchangeControl/TA1" />
+          <xsl:apply-templates select="X12/InterchangeControl/FunctionalGroup/GS" />
+          <xsl:apply-templates select="X12/InterchangeControl/FunctionalGroup/TransactionSet[@id = '999']/ST" />
           <xsl:apply-templates select="X12/InterchangeControl/FunctionalGroup/TransactionSet[@id = '999']" />
         </div>
       </body>
@@ -152,7 +155,7 @@
             <xsl:when test="IK304 = '7'">Segment not in proper sequence</xsl:when>
             <xsl:when test="IK304 = '8'">Segment has data element errors</xsl:when>
             <xsl:when test="IK304 = 'I4'">Implementation Not Used segment present</xsl:when>
-            <xsl:when test="IK304 = 'I6'">Implementation dependent missing</xsl:when>
+            <xsl:when test="IK304 = 'I6'">Implementation dependent segment missing</xsl:when>
             <xsl:when test="IK304 = 'I7'">Implementation loop occurs under minimum times</xsl:when>
             <xsl:when test="IK304 = 'I8'">Implementation segment below minimum use</xsl:when>
             <xsl:when test="IK304 = 'I9'">Implementation dependent Not Used segment present</xsl:when>
@@ -163,14 +166,34 @@
   </xsl:template>
 
   <xsl:template match="CTX">
-    <xsl:if test="string-length(normalize-space(CTX01))!=0">
-      <tr>
-        <td class="label">Context Identification:</td>
-        <td class="data1">
-          <xsl:value-of select="CTX01"/>
-        </td>
-      </tr>
-    </xsl:if>
+    <xsl:choose>
+      <xsl:when test="string-length(normalize-space(CTX01/CTX01-01))!=0">
+        <tr>
+          <td class="label">Context Name:</td>
+          <td class="data1">
+            <xsl:value-of select="CTX01/CTX01-01"/>
+          </td>
+        </tr>
+        <xsl:if test="string-length(normalize-space(CTX01/CTX01-02))!=0">
+          <tr>
+            <td class="label">Context Reference:</td>
+            <td class="data1">
+              <xsl:value-of select="CTX01/CTX01-02"/>
+            </td>
+          </tr>
+        </xsl:if>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:if test="string-length(normalize-space(CTX01))!=0">
+          <tr>
+            <td class="label">Context Identification:</td>
+            <td class="data1">
+              <xsl:value-of select="CTX01"/>
+            </td>
+          </tr>
+        </xsl:if>
+      </xsl:otherwise>
+    </xsl:choose>
     <xsl:if test="string-length(normalize-space(CTX02))!=0">
       <tr>
         <td class="label">Segment ID Code:</td>
@@ -576,5 +599,9 @@
 
   <xsl:include href="..\TA1\CnvXmlTA1_Include.xslt" />
   <xsl:include href="..\Common\X12Style_Include.xslt" />
-
+  <xsl:include href="..\Common\X12FormatDate_Include.xslt" />
+  <xsl:include href="..\Common\X12FormatTime_Include.xslt" />
+  <xsl:include href="..\Common\ControlSegment_ISA_Include.xslt" />
+  <xsl:include href="..\Common\ControlSegment_GS_Include.xslt" />
+  <xsl:include href="..\Common\ControlSegment_ST_Include.xslt" />
 </xsl:stylesheet>

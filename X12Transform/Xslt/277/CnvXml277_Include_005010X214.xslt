@@ -10,9 +10,29 @@
   <xsl:template match="Loop[@id = '2000A']">
     <div class="section">
       <div class="secHeader" onclick="onSectionClick()">
-        <span class="secMarker">-</span> Payer Information
+        <span class="secMarker">+</span> Information Source Detail
+        &#160;&#160;
+        <span>Accepted: </span>
+        <xsl:choose>
+          <xsl:when test="Loop[@id = '2000B']/Loop[@id = '2200B']/QTY/QTY01 = '90'">
+            <xsl:value-of select="Loop[@id = '2000B']/Loop[@id = '2200B']/QTY/QTY02"/>
+          </xsl:when>
+          <xsl:otherwise>
+            0
+          </xsl:otherwise>
+        </xsl:choose>
+        &#160;&#160;
+        <span>Rejected: </span>
+        <xsl:choose>
+          <xsl:when test="Loop[@id = '2000B']/Loop[@id = '2200B']/QTY/QTY01 = 'AA'">
+            <xsl:value-of select="Loop[@id = '2000B']/Loop[@id = '2200B']/QTY/QTY02"/>
+          </xsl:when>
+          <xsl:otherwise>
+            0
+          </xsl:otherwise>
+        </xsl:choose>
       </div>
-      <div class="secContent">
+      <div class="secContent" style="display:none">
         <table class="secTable">
           <colgroup>
             <col class="colLabel"></col>
@@ -38,7 +58,7 @@
   <xsl:template match="Loop[@id = '2000B']">
     <div class="section indent">
       <div class="secHeader" onclick="onSectionClick()">
-        <span class="secMarker">-</span> Receiver Information
+        <span class="secMarker">-</span> Information Receiver Detail
       </div>
       <div class="secContent">
         <table class="secTable">
@@ -68,7 +88,7 @@
   <xsl:template match="Loop[@id = '2000C']">
     <div class="section indent">
       <div class="secHeader" onclick="onSectionClick()">
-        <span class="secMarker">-</span> Service Provider Information
+        <span class="secMarker">-</span> Billing Provider of Service Detail
       </div>
       <div class="secContent">
         <table class="secTable">
@@ -123,15 +143,12 @@
   <xsl:template match="Loop[@id = '2000D']">
     <div class="section">
       <div class="secHeader" onclick="onSectionClick()">
-        <span class="secMarker">-</span> Patient Information
+        <span class="secMarker">-</span> Patient Detail
         <xsl:if test="Loop[@id = '2100D']/NM1/NM101 = 'QC' and Loop[@id = '2100D']/NM1/NM102 = '1'">
           &#160;-&#160;
           <xsl:value-of select="Loop[@id = '2100D']/NM1/NM103"/>
-          <xsl:if test="string-length(normalize-space(Loop[@id = '2100D']/NM1/NM104))!=0">
-            ,&#160;<xsl:value-of select="Loop[@id = '2100D']/NM1/NM104"/>
-          </xsl:if>
-          <xsl:if test="string-length(normalize-space(Loop[@id = '2100D']/NM1/NM105))!=0">
-            &#160;<xsl:value-of select="Loop[@id = '2100D']/NM1/NM105"/>
+          <xsl:if test="string-length(normalize-space(Loop[@id = '2100D']/NM1/NM104))!=0">,&#160;<xsl:value-of select="Loop[@id = '2100D']/NM1/NM104"/></xsl:if>
+          <xsl:if test="string-length(normalize-space(Loop[@id = '2100D']/NM1/NM105))!=0">&#160;<xsl:value-of select="Loop[@id = '2100D']/NM1/NM105"/>
           </xsl:if>
         </xsl:if>
         &#160;-&#160;

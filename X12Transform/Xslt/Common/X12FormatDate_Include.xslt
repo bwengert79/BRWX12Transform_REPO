@@ -6,6 +6,14 @@
   <xsl:template name="format_date">
     <xsl:param name="theDate"/>
     <xsl:choose>
+      <xsl:when test="string-length($theDate)=6">
+          <xsl:value-of select="concat(
+                      substring($theDate, 3, 2),
+                      '/',
+                      substring($theDate, 5, 2),
+                      '/',
+                      substring($theDate, 1, 2))"/>
+      </xsl:when>
       <xsl:when test="string-length($theDate)=8">
           <xsl:value-of select="concat(
                       substring($theDate, 5, 2),

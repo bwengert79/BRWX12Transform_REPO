@@ -6,7 +6,7 @@
   <xsl:template name="format_subsection">
     <xsl:param name="theLabel"/>
     <tr>
-      <td class="subsection">*** <xsl:value-of select="$theLabel"/> ***</td>
+      <td class="subsection" colspan="2">*** <xsl:value-of select="$theLabel"/> ***</td>
     </tr>
   </xsl:template>
 

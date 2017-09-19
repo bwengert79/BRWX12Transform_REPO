@@ -18,6 +18,7 @@
       <body>
         <div class="main">
           <div class="title">Health Care Claim Acknowledgment (277)</div>
+          <xsl:apply-templates select="X12/InterchangeControl/ISA" />
           <xsl:apply-templates select="X12/InterchangeControl/FunctionalGroup/TransactionSet[@id = '277']" />
         </div>
       </body>
@@ -36,10 +37,12 @@
   <xsl:include href="CnvXml277_Include_SVC.xslt" />
   <xsl:include href="CnvXml277_Include_TRN_005010X214.xslt" />
   <xsl:include href="..\Common\X12FormatDate_Include.xslt" />
+  <xsl:include href="..\Common\X12FormatTime_Include.xslt" />
   <xsl:include href="..\Common\X12FormatPhone_Include.xslt" />
   <xsl:include href="..\Common\X12ToggleBtn_Include.xslt" />
   <xsl:include href="..\Common\X12SubSection_Include.xslt" />
   <xsl:include href="..\Common\X12Style_Include.xslt" />
   <xsl:include href="..\Common\X12Script_Include.xslt" />
+  <xsl:include href="..\Common\ControlSegment_ISA_Include.xslt" />
 
 </xsl:stylesheet>

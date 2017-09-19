@@ -104,8 +104,10 @@
             &#160;<xsl:value-of select="Loop[@id = '2010BA']/NM1/NM105"/>
           </xsl:if>
         </xsl:if>
-        &#160;-&#160;
-        <xsl:value-of select="Loop[@id = '2300']/CLM/CLM01"/>
+        <xsl:if test="string-length(normalize-space(Loop[@id = '2300']/CLM/CLM01))!=0">
+          &#160;-&#160;
+          <xsl:value-of select="Loop[@id = '2300']/CLM/CLM01"/>
+        </xsl:if>
       </div>
       <div class="secContent">
         <table class="secTable">
@@ -478,7 +480,7 @@
   <xsl:template match="Loop[@id = '2430']">
     <xsl:call-template name="format_subsection">
       <xsl:with-param name="theLabel">
-        <xsl:text>Line Adjusication Information</xsl:text>
+        <xsl:text>Line Adjudication Information</xsl:text>
       </xsl:with-param>
     </xsl:call-template>
     <xsl:apply-templates select="SVD" />
@@ -501,6 +503,18 @@
     <div class="section indent">
       <div class="secHeader" onclick="onSectionClick()">
         <span class="secMarker">-</span> Patient Detail
+        <xsl:if test="Loop[@id = '2010CA']/NM1/NM101 = 'QC' and Loop[@id = '2010CA']/NM1/NM102 = '1'">
+          &#160;-&#160;
+          <xsl:value-of select="Loop[@id = '2010CA']/NM1/NM103"/>
+          <xsl:if test="string-length(normalize-space(Loop[@id = '2010CA']/NM1/NM104))!=0">
+            ,&#160;<xsl:value-of select="Loop[@id = '2010CA']/NM1/NM104"/>
+          </xsl:if>
+          <xsl:if test="string-length(normalize-space(Loop[@id = '2010CA']/NM1/NM105))!=0">
+            &#160;<xsl:value-of select="Loop[@id = '2010CA']/NM1/NM105"/>
+          </xsl:if>
+        </xsl:if>
+        &#160;-&#160;
+        <xsl:value-of select="Loop[@id = '2300']/CLM/CLM01"/>
       </div>
       <div class="secContent">
         <table class="secTable">

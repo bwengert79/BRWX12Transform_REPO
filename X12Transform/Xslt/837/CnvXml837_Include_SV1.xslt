@@ -9,7 +9,6 @@
     <xsl:apply-templates select="SV101/SV101-03[node()]" />
     <xsl:apply-templates select="SV101/SV101-04[node()]" />
     <xsl:apply-templates select="SV101/SV101-05[node()]" />
-    <xsl:apply-templates select="SV101/SV101-06[node()]" />
     <xsl:apply-templates select="SV101/SV101-07[node()]" />
     <xsl:apply-templates select="SV101/SV101-08[node()]" />
     <xsl:apply-templates select="SV102[node()]" />
@@ -96,15 +95,6 @@
   </xsl:template>
 
   <xsl:template match="SV101-05">
-    <tr>
-      <td class="label">Procedure Modifier: </td>
-      <td class="data1">
-        <xsl:value-of select="."/>
-      </td>
-    </tr>
-  </xsl:template>
-
-  <xsl:template match="SV101-06">
     <tr>
       <td class="label">Procedure Modifier: </td>
       <td class="data1">
