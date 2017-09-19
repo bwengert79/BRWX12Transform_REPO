@@ -12,25 +12,19 @@
       <div class="secHeader" onclick="onSectionClick()">
         <span class="secMarker">+</span> Information Source Detail
         &#160;&#160;
-        <span>Accepted: </span>
-        <xsl:choose>
-          <xsl:when test="Loop[@id = '2000B']/Loop[@id = '2200B']/QTY/QTY01 = '90'">
-            <xsl:value-of select="Loop[@id = '2000B']/Loop[@id = '2200B']/QTY/QTY02"/>
-          </xsl:when>
-          <xsl:otherwise>
-            0
-          </xsl:otherwise>
-        </xsl:choose>
+        <xsl:call-template name="qty02_or_zero">
+          <xsl:with-param name="theLabel"><xsl:text>Accepted</xsl:text></xsl:with-param>
+          <xsl:with-param name="theQTY" select="Loop[@id = '2000B']/Loop[@id = '2200B']/QTY[QTY01 = '90']">
+          </xsl:with-param>
+        </xsl:call-template>
         &#160;&#160;
-        <span>Rejected: </span>
-        <xsl:choose>
-          <xsl:when test="Loop[@id = '2000B']/Loop[@id = '2200B']/QTY/QTY01 = 'AA'">
-            <xsl:value-of select="Loop[@id = '2000B']/Loop[@id = '2200B']/QTY/QTY02"/>
-          </xsl:when>
-          <xsl:otherwise>
-            0
-          </xsl:otherwise>
-        </xsl:choose>
+        <xsl:call-template name="qty02_or_zero">
+          <xsl:with-param name="theLabel">
+            <xsl:text>Rejected</xsl:text>
+          </xsl:with-param>
+          <xsl:with-param name="theQTY" select="Loop[@id = '2000B']/Loop[@id = '2200B']/QTY[QTY01 = 'AA']">
+          </xsl:with-param>
+        </xsl:call-template>
       </div>
       <div class="secContent" style="display:none">
         <table class="secTable">
@@ -105,7 +99,7 @@
           <a hidefocus="true" class="tabLink" onclick="onTabClick()">Accepted Claims</a>
           <xsl:call-template name="toggle_all_tab_sections">
             <xsl:with-param name="btnText">
-              <xsl:text>Collapse All Patient Information</xsl:text>
+              <xsl:text>Expand All Patient Information</xsl:text>
             </xsl:with-param>
           </xsl:call-template>
         </div>
@@ -143,7 +137,7 @@
   <xsl:template match="Loop[@id = '2000D']">
     <div class="section">
       <div class="secHeader" onclick="onSectionClick()">
-        <span class="secMarker">-</span> Patient Detail
+        <span class="secMarker">+</span> Patient Detail
         <xsl:if test="Loop[@id = '2100D']/NM1/NM101 = 'QC' and Loop[@id = '2100D']/NM1/NM102 = '1'">
           &#160;-&#160;
           <xsl:value-of select="Loop[@id = '2100D']/NM1/NM103"/>
@@ -154,7 +148,7 @@
         &#160;-&#160;
         <xsl:value-of select="Loop[@id = '2200D']/TRN/TRN02"/>
       </div>
-      <div class="secContent">
+      <div class="secContent" style="display:none">
         <table class="secTable">
           <colgroup>
             <col class="colLabel"></col>
@@ -196,4 +190,18 @@
     <xsl:apply-templates select="DTP" />
   </xsl:template>
 
+  <xsl:template name="qty02_or_zero">
+    <xsl:param name="theLabel"/>
+    <xsl:param name="theQTY"/>
+    <span><xsl:value-of select="$theLabel"/>: </span>
+    <xsl:choose>
+      <xsl:when test="$theQTY/QTY02[node()]">
+        <xsl:value-of select="$theQTY/QTY02"/>
+      </xsl:when>
+      <xsl:otherwise>
+        0
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+  
 </xsl:stylesheet>
